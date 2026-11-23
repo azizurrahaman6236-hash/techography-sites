@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Techography Prompts Â· Gemini Zero-Credit Video Prompt</title>
+<meta name="description" content="Copy the free Gemini prompt that makes premium motion-graphics videos with code. Zero credits.">
+<meta property="og:title" content="Gemini Zero-Credit Video Prompt Â· Techography">
+<meta property="og:description" content="Tap to copy the full prompt. Zero credits, pure code, any topic.">
+<meta name="theme-color" content="#07080d">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080d;--card:#10121b;--line:#232637;--txt:#eef0f7;--mut:#9aa0b8;--g:linear-gradient(110deg,#4796E3 0%,#9177C7 50%,#CA6673 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Outfit,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-20%;z-index:-1;background:radial-gradient(40% 30% at 15% 10%,#4796e333,transparent 70%),radial-gradient(40% 30% at 90% 25%,#9177c733,transparent 70%),radial-gradient(50% 35% at 50% 100%,#ca667326,transparent 70%)}
+.wrap{max-width:720px;margin:0 auto;padding:22px 18px 60px}
+header{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.logo{width:42px;height:42px;border-radius:12px;background:var(--g);display:grid;place-items:center;font-weight:900;font-size:22px;color:#fff;box-shadow:0 0 24px #9177c766}
+.brand b{display:block;font-size:18px;letter-spacing:.3px}.brand span{color:var(--mut);font-size:13px}
+.ig{margin-left:auto;color:var(--txt);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:8px 12px;border-radius:999px;background:#ffffff08}
+nav.toc{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:18px;scrollbar-width:none}
+nav.toc a{flex:none;font-size:13px;color:var(--mut);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:7px 12px}
+section.prompt{background:linear-gradient(var(--card),var(--card)) padding-box,var(--g) border-box;border:1px solid transparent;border-radius:22px;padding:22px 18px;margin-bottom:28px;box-shadow:0 20px 60px #0008}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+h1,h2{font-weight:900;line-height:1.08;font-size:clamp(30px,8.5vw,44px);margin-bottom:10px}
+h1 em,h2 em{font-style:normal;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);font-size:16px;line-height:1.45;margin-bottom:18px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.pills span{font-size:12.5px;padding:6px 10px;border-radius:999px;background:#ffffff0d;border:1px solid var(--line)}
+.copy{width:100%;border:0;border-radius:16px;padding:18px;font:800 19px Outfit,sans-serif;color:#fff;background:var(--g);cursor:pointer;box-shadow:0 10px 30px #9177c755;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .15s}
+.copy:active{transform:scale(.98)}.copy.done{background:#1f9d55;box-shadow:0 10px 30px #1f9d5555}
+pre{margin:14px 0 6px;background:#0a0b12;border:1px solid var(--line);border-radius:14px;padding:16px 14px;font:13.5px/1.6 "JetBrains Mono",ui-monospace,monospace;color:#d9dcef;white-space:pre-wrap;word-break:break-word;max-height:360px;overflow:auto}
+pre.open{max-height:none}
+.more{background:none;border:0;color:#9db8ff;font:600 14px Outfit,sans-serif;padding:6px 0;cursor:pointer}
+h3{font-size:20px;font-weight:800;margin:22px 0 12px}
+ol.steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+ol.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;background:#ffffff07;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:15.5px;line-height:1.4}
+ol.steps li:before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--g);display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff}
+.note{color:var(--mut);font-size:13.5px;line-height:1.5;margin-top:14px}
+footer{text-align:center;color:var(--mut);font-size:13px;margin-top:10px}
+footer a{color:var(--txt)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:#1f9d55;color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;transition:transform .25s;z-index:9}
+.toast.show{transform:translate(-50%,0)}
+</style>
+<!-- techography fullscreen / app mode -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body><div class="wrap">
+<header><div class="logo">T</div><div class="brand"><b>Techography</b><span>Free prompts from my reels</span></div>
+<a class="ig" href="https://www.instagram.com/_techography/">@_techography</a></header>
+
+<nav class="toc"><a href="#gemini-zero-credit-video">ð¬ Zero-Credit Video</a></nav>
+
+<!-- ===== PROMPT SECTIONS: copy one <section class="prompt"> block to add a new prompt ===== -->
+<section class="prompt" id="gemini-zero-credit-video">
+  <div class="tag">Prompt #1 Â· Gemini</div>
+  <h1>Gemini <em>Zero-Credit</em> Video Prompt</h1>
+  <p class="sub">Premium SaaS-explainer motion graphics made only with code. Works for any topic, and gives a new look every time.</p>
+  <div class="pills"><span>â¡ 0 credits</span><span>ð± 9:16 Â· 1080Ã1920</span><span>ð Sound effects</span><span>ðï¸ Voice-over sync</span></div>
+  <button class="copy" data-target="p1">ð Copy prompt</button>
+  <pre id="p1">Act as a world-class motion designer and creative developer. Create a premium SaaS-explainer style motion-graphics video using ONLY code (HTML canvas/CSS/JavaScript), no AI video model and no credits.
+
+TOPIC: [write your topic here]
+VOICE-OVER: [attach audio, or write the script here]
+
+RULES:
+- Vertical 9:16, 1080x1920, 60fps. Length = the voice-over&#x27;s length (or 30s if none).
+- Read my topic/script, split it into scenes, and design every scene to visually explain exactly what is being said at that moment: key words as kinetic typography, ideas as icons, UI mockup cards, charts, counters, diagrams or code windows.
+- Every time I use this prompt, invent a NEW unique look: pick a fresh colour palette, font pairing, background style (gradient mesh, grid, glassmorphism, neon, paper, 3D depth) and transition set that fits the topic. Never repeat the same design twice.
+- Premium motion: smooth easing with overshoot, parallax depth, glows, particle bursts, masked text reveals, smooth zoom-ins on important elements, a scene transition every 2â4 seconds (wipes, zoom-through, glitch, light leak, film burn, slide), no flicker.
+- Sound design synthesized in code and timed to the visuals: whoosh on transitions, pop/click when text or cards land, electric zap, riser before reveals, deep boom on the big moment. Mix it under my voice-over.
+- Big bold readable text, mobile-first, safe margins for Instagram Reels.
+- End with a strong outro card with a call to action.
+
+Build it in your coding environment, render it frame by frame to a final MP4 (H.264, with audio mixed in), and give me the downloadable MP4 file.</pre>
+  <button class="more" data-target="p1">Show full prompt â</button>
+  <h3>How to use it</h3>
+  <ol class="steps">
+    <li>Tap <b>Copy prompt</b> above.</li>
+    <li>Open the <b>Gemini</b> app and choose <b>Task</b> mode.</li>
+    <li>Paste the prompt and fill in your <b>TOPIC</b>.</li>
+    <li>Attach your <b>voice-over</b> audio (optional) and send.</li>
+    <li>Gemini builds it in code and gives you the final <b>MP4</b>. Download and post!</li>
+  </ol>
+  <p class="note">Tip: run the same prompt again for a completely different design.</p>
+</section>
+<!-- ===== END PROMPT SECTIONS ===== -->
+
+<footer>More prompts coming. Follow <a href="https://www.instagram.com/_techography/">@_techography</a> ð</footer>
+</div>
+<div class="toast" id="toast">Copied! Now paste it in Gemini â¨</div>
+<script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='0';a.style.opacity='0';document.body.appendChild(a);a.focus();a.select();a.setSelectionRange(0,a.value.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+  var t=document.getElementById(b.dataset.target).innerText,label=b.innerHTML;
+  function done(){b.classList.add('done');b.innerHTML='â Copied!';var s=document.getElementById('toast');s.classList.add('show');setTimeout(function(){b.classList.remove('done');b.innerHTML=label;s.classList.remove('show')},2200)}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,function(){if(fallbackCopy(t))done()})}else if(fallbackCopy(t))done();
+})});
+document.querySelectorAll('.more').forEach(function(m){m.addEventListener('click',function(){var p=document.getElementById(m.dataset.target);p.classList.toggle('open');m.textContent=p.classList.contains('open')?'Show less â':'Show full prompt â'})});
+</script>
+<!-- techography fullscreen button -->
+<style>#tgfs{position:fixed;right:10px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:2147483647;width:40px;height:40px;border-radius:12px;border:1px solid rgba(0,240,255,.55);background:rgba(8,8,20,.6);color:#fff;font:20px/1 system-ui,sans-serif;display:flex;align-items:center;justify-content:center;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);-webkit-tap-highlight-color:transparent;opacity:.85;cursor:pointer;padding:0;margin:0;box-shadow:0 0 12px rgba(0,240,255,.35);touch-action:manipulation}#tgfs:active{transform:scale(.9)}</style>
+<button id="tgfs" type="button" aria-label="Full screen" title="Full screen">&#x26F6;</button>
+<script>(function(){var b=document.getElementById('tgfs'),d=document,e=d.documentElement;var inFrame=false;try{inFrame=window.top!==window}catch(x){inFrame=true}
+var req=e.requestFullscreen||e.webkitRequestFullscreen;if(inFrame||!req||!(d.fullscreenEnabled||d.webkitFullscreenEnabled)){b.parentNode.removeChild(b);return}
+function cur(){return d.fullscreenElement||d.webkitFullscreenElement}
+function upd(){var f=!!cur();b.innerHTML=f?'&#x2715;':'&#x26F6;';b.setAttribute('aria-label',f?'Exit full screen':'Full screen');b.title=b.getAttribute('aria-label')}
+['pointerdown','touchstart','mousedown'].forEach(function(t){b.addEventListener(t,function(ev){ev.stopPropagation()},{passive:true})});
+b.addEventListener('click',function(ev){ev.stopPropagation();ev.preventDefault();if(cur()){(d.exitFullscreen||d.webkitExitFullscreen).call(d)}else{try{var p=req.call(e,{navigationUI:'hide'});if(p&&p.catch)p.catch(function(){})}catch(x){}}});
+d.addEventListener('fullscreenchange',upd);d.addEventListener('webkitfullscreenchange',upd)})();</script>
+</body></html>

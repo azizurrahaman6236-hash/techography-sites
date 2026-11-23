@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Techography — Websites & Tools Hub</title>
+<style>
+  :root { --bg:#0b0e14; --card:#141925; --border:#232b3d; --accent:#f59e0b; --text:#f3f4f6; --muted:#9ca3af; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:var(--bg); color:var(--text); padding:24px 16px 48px; }
+  .wrap { max-width:860px; margin:0 auto; }
+  header { text-align:center; margin-bottom:28px; }
+  h1 { font-size:1.75rem; font-weight:800; letter-spacing:-0.02em; }
+  h1 span { color:var(--accent); }
+  p.sub { color:var(--muted); margin-top:8px; font-size:0.95rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:14px; }
+  a.card { display:block; text-decoration:none; color:inherit; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; transition:transform .15s, border-color .15s; }
+  a.card:hover { transform:translateY(-2px); border-color:var(--accent); }
+  .tag { display:inline-block; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--accent); background:rgba(245,158,11,0.12); padding:3px 8px; border-radius:999px; margin-bottom:10px; }
+  .card h2 { font-size:1.08rem; margin-bottom:6px; }
+  .card p { font-size:0.86rem; color:var(--muted); line-height:1.45; }
+  footer { text-align:center; margin-top:34px; color:var(--muted); font-size:0.82rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><span>Techography</span> — All Websites & Tools</h1>
+    <p class="sub">100% hosted on GitHub Pages — free forever, owned by Ajju.</p>
+  </header>
+  <div class="grid">
+    <a class="card" href="./fury-studio/"><span class="tag">Studio</span><h2>FURY Studio</h2><p>FURY voice-reactive animation studio &amp; exporter.</p></a>
+    <a class="card" href="./fury-studio-next/"><span class="tag">Studio v2</span><h2>FURY Studio Next</h2><p>Next-gen FURY studio build.</p></a>
+    <a class="card" href="./techography-apps/"><span class="tag">Hub</span><h2>Techography Apps Hub</h2><p>Main apps directory with downloadable source zips.</p></a>
+    <a class="card" href="./hidden-cam-finder/"><span class="tag">Utility</span><h2>Hidden Camera Lens Finder</h2><p>Browser camera reflection helper (+ Python scanner in repo).</p></a>
+    <a class="card" href="./magnet-phone/"><span class="tag">Interactive</span><h2>Magnet Phone Site</h2><p>Interactive physics &amp; magnet web demo.</p></a>
+    <a class="card" href="./prompts/"><span class="tag">Prompts</span><h2>Techography Prompts</h2><p>Curated AI &amp; creator prompts library.</p></a>
+    <a class="card" href="./ai-poster-prompt/"><span class="tag">Prompts</span><h2>AI Poster Prompt</h2><p>Poster prompt giveaway page.</p></a>
+    <a class="card" href="./vox-skill/"><span class="tag">Guide</span><h2>VOX Collage Video Prompter</h2><p>VOX collage style video guide &amp; prompt system.</p></a>
+    <a class="card" href="./dream-house/"><span class="tag">3D / Tour</span><h2>Dream House Walkthrough</h2><p>Interactive dream house visual walkthrough.</p></a>
+  </div>
+  <footer>Hosted free forever on GitHub Pages · Repo: azizurrahaman6236-hash/techography-sites</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FURY Studio — make FURY talk with your voice</title>
+<meta name="description" content="Upload your voiceover and FURY, the liquid-glass AI presenter, reacts to every word. Download the video in vertical or horizontal.">
+<meta name="theme-color" content="#05070d">
+<link rel="stylesheet" href="styles.css?v=8">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+<header class="top">
+  <div class="brand"><span class="dot" aria-hidden="true"></span>FURY <b>Studio</b></div>
+  <p class="tag">Your voice. FURY's body.</p>
+</header>
+
+<main class="wrap">
+  <section class="stage-col" aria-label="Preview">
+    <div id="stageBox" class="stage vertical">
+      <canvas id="stage" width="1080" height="1920" aria-label="FURY live preview"></canvas>
+      <div id="loading" class="overlay"><div class="load-in"><span class="spin" aria-hidden="true"></span>Loading FURY…<a class="late" href="./?r=1">Still loading? Tap to retry</a></div></div>
+      <div id="recBadge" class="rec" hidden><span></span>REC</div>
+    </div>
+    <div class="transport">
+      <button id="playBtn" class="btn ghost" disabled>▶ Play preview</button>
+      <div class="time"><span id="tCur">0:00</span> / <span id="tDur">0:00</span></div>
+    </div>
+    <div class="meter" aria-hidden="true"><i id="meterFill"></i></div>
+  </section>
+
+  <section class="steps-col">
+    <div class="card">
+      <h2><span class="num">1</span>Choose format</h2>
+      <div class="seg" role="radiogroup" aria-label="Video format">
+        <button class="seg-btn active" data-fmt="vertical" role="radio" aria-checked="true"><span class="ico v"></span>Vertical<small>9:16 · Reels / Shorts</small></button>
+        <button class="seg-btn" data-fmt="horizontal" role="radio" aria-checked="false"><span class="ico h"></span>Horizontal<small>16:9 · YouTube</small></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">2</span>Add your voice</h2>
+      <label class="drop" id="drop">
+        <input id="file" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.aac">
+        <span class="drop-ico">⬆</span>
+        <span id="dropText">Tap to upload voiceover<br><small>MP3, WAV, M4A, OGG</small></span>
+      </label>
+      <div class="or">or</div>
+      <button id="micBtn" class="btn ghost wide">🎙 Record with mic</button>
+      <p id="voiceInfo" class="info" hidden></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">3</span>Preview</h2>
+      <p class="hint">Press play. FURY comes alive and morphs with every word, and fades back to almost invisible in the pauses.</p>
+      <button id="playBtn2" class="btn ghost wide" disabled>▶ Play preview</button>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">4</span>Download</h2>
+      <p class="hint">FURY renders your full voiceover, start to end, frame by frame. Keep this screen open until it's done.</p>
+      <button id="exportBtn" class="btn primary wide" disabled>⚡ Create video</button>
+      <div class="progress" id="progWrap" hidden><i id="prog"></i><span id="progText">0%</span></div>
+      <a id="dlLink" class="btn primary wide" hidden download>⬇ Download video</a>
+      <p id="exportInfo" class="info" hidden></p>
+    </div>
+  </section>
+</main>
+<footer class="foot">FURY Studio · everything runs in your browser, your voice never leaves your phone.</footer>
+<script src="assets/mp4-muxer.js?v=8"></script>
+<script src="script.js?v=8"></script>
+</body>
+</html>

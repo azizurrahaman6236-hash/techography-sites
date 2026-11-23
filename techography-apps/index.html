@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Techography Apps · saari websites ek jagah</title>
+<meta name="description" content="@_techography ki saari websites ek link mein. Kholo full screen, code download karo.">
+<meta property="og:title" content="Techography Apps 🚀 saari websites ek jagah">
+<meta property="og:description" content="Har app full screen mein kholo, aur uska code download karo. By @_techography">
+<meta property="og:image" content="logo.png">
+<meta name="theme-color" content="#05010f">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="list-view">
+  <header class="top">
+    <div class="brand"><img src="logo.png" alt="" width="40" height="40"><div><h1>Techography <span>Apps</span></h1><p>@_techography ki saari websites, ek link mein</p></div></div>
+    <label class="search"><span aria-hidden="true">🔍</span><input id="q" type="search" placeholder="Search karo… (magnet, prompt, fury)" autocomplete="off" aria-label="Search apps"></label>
+    <div class="stats" id="stats"></div>
+  </header>
+  <main>
+    <ol class="apps" id="apps"></ol>
+    <p class="empty" id="empty" hidden>Kuch nahi mila 😅 doosra word try karo</p>
+    <details class="media" id="mediaBox">
+      <summary><span>🎞️ Reel media links</span><small id="mediaCount"></small></summary>
+      <p class="note">Ye apps nahi hain: reels ke videos aur files yahan se serve hote hain (auto-DM aur downloads ke liye). Inka koi code nahi hai.</p>
+      <ul class="mlist" id="media"></ul>
+    </details>
+  </main>
+  <footer>Made for <a href="https://instagram.com/_techography" target="_blank" rel="noopener">@_techography</a> 💜 Link save kar lo, sab yahin milega.</footer>
+</div>
+
+<section id="detail-view" hidden aria-live="polite">
+  <div class="dtop"><button class="back" id="back" type="button" aria-label="Back">←</button><span id="dnum"></span></div>
+  <div class="dcard">
+    <div class="dhead"><div class="demoji" id="demoji"></div><div><h2 id="dname"></h2><p class="dmeta" id="dmeta"></p></div></div>
+    <p class="ddesc" id="ddesc"></p>
+    <button class="btn primary" id="openFs" type="button">⛶ Open Full Screen</button>
+    <a class="btn dl" id="dl" download>⬇ Download Code <small id="dlkb"></small></a>
+    <div class="row"><a class="btn ghost" id="newtab" target="_blank" rel="noopener">↗ New tab mein kholo</a><button class="btn ghost" id="copy" type="button">🔗 Copy link</button></div>
+    <div id="twin"></div>
+    <p class="tip">Camera, mic ya sensor wali app (jaise Magnet) best chalti hai "New tab" mein. Wahan bhi ⛶ button hai.</p>
+    <button class="thumbwrap" id="thumbBtn" type="button" aria-label="Open full screen"><img id="thumb" alt="Preview" loading="lazy"><span>▶ Tap to open</span></button>
+  </div>
+</section>
+
+<div id="viewer" hidden>
+  <iframe id="frame" title="App" allow="fullscreen; camera; microphone; autoplay; clipboard-write; clipboard-read; accelerometer; gyroscope; magnetometer; display-capture; web-share; screen-wake-lock" allowfullscreen></iframe>
+  <div class="vbar" title="Drag karke hata sakte ho"><button id="vexit" class="vbtn x" type="button" aria-label="Exit full screen">✕</button><a id="vnew" class="vbtn" target="_blank" rel="noopener" aria-label="Open in new tab">↗</a></div>
+</div>
+<div id="toast" role="status"></div>
+<script id="data" type="application/json">{"apps": [{"slug": "techography-magnet", "emoji": "🧲", "name": "MAGNET PHONE", "date": "2026-10-26", "tag": "Fun", "desc": "Phone ke paas magnet lao, saare icons aur text magnet ki taraf khinch jayenge. Combine game bhi.", "zip": "zips/techography-magnet.zip", "zipKB": 410, "thumb": "thumbs/techography-magnet.jpg"}, {"slug": "techography-cyclone-arnab", "emoji": "🌀", "name": "Cyclone Arnab", "date": "2026-10-26", "tag": "News", "desc": "Cyclone Arnab A to Z aur safety numbers, ek page mein.", "zip": "zips/techography-cyclone-arnab.zip", "zipKB": 414, "thumb": "thumbs/techography-cyclone-arnab.jpg"}, {"slug": "techography-google-ads-off", "emoji": "🔒", "name": "Google Ads Off", "date": "2026-10-26", "tag": "Privacy", "desc": "Gmail aur Photos ke data se ads band karo, 3 official Google links ke saath.", "zip": "https://techography-apps-code.sites.tab.bot/zips/techography-google-ads-off.zip", "zipKB": 264, "thumb": "thumbs/techography-google-ads-off.jpg"}, {"slug": "techography-vox-skill", "emoji": "🎬", "name": "Vox Collage Skill", "date": "2026-10-25", "tag": "Free file", "desc": "FREE Vox-style collage video skill. File download karo, apni video banao.", "zip": "https://techography-apps-code.sites.tab.bot/zips/techography-vox-skill.zip", "zipKB": 153, "thumb": "thumbs/techography-vox-skill.jpg"}, {"slug": "techography-prompts", "emoji": "✨", "name": "Gemini Zero-Credit Prompt", "date": "2026-10-25", "tag": "Prompt", "desc": "Free prompt copy karo jo code se premium motion-graphics videos banata hai.", "zip": "zips/techography-prompts.zip", "zipKB": 59, "thumb": "thumbs/techography-prompts.jpg"}, {"slug": "isitpossible-media", "emoji": "🏔️", "name": "IS IT POSSIBLE: Dyatlov Pass", "date": "2026-10-24", "tag": "Upload kit", "desc": "Episode 1 ka upload kit: video, thumbnail, title aur description ek jagah.", "zip": "https://techography-apps-code.sites.tab.bot/zips/isitpossible-media.zip", "zipKB": 161, "thumb": "thumbs/isitpossible-media.jpg"}, {"slug": "techography-hidden-cam", "emoji": "📷", "name": "Hidden Camera Finder", "date": "2026-10-23", "tag": "Tool", "desc": "PC Wi-Fi scanner + phone lens finder. Chhupa camera dhoondo, exact prompts ke saath.", "zip": "zips/techography-hidden-cam.zip", "zipKB": 84, "thumb": "thumbs/techography-hidden-cam.jpg"}, {"slug": "fury-studio", "emoji": "🤖", "name": "FURY Studio", "date": "2026-10-23", "tag": "AI video", "desc": "Apni voice upload karo, FURY AI presenter har word pe react karega. Video download karo.", "twin": "fury-studio-next", "zip": "https://techography-apps-code.sites.tab.bot/zips/fury-studio.zip", "zipKB": 548, "thumb": "thumbs/fury-studio.jpg"}], "twins": {"fury-studio-next": {"slug": "fury-studio-next", "name": "FURY Studio (testing version)"}}, "media": [{"slug": "techography-tab-reel-2", "name": "Tab reel 2 media", "date": "2026-10-26"}, {"slug": "techography-tab-reel", "name": "Tab reel media", "date": "2026-10-25"}, {"slug": "techography-vox-reel", "name": "Vox reel media", "date": "2026-10-25"}, {"slug": "techography-family-trust", "name": "Family Trust reel media", "date": "2026-10-25"}, {"slug": "techography-gemini-reel", "name": "Gemini reel media", "date": "2026-10-25"}, {"slug": "techography-kya-hoon-mein", "name": "\"Kya hoon mein\" reel media", "date": "2026-10-23"}, {"slug": "techography-tab-promo", "name": "Tab promo media", "date": "2026-10-23", "twin": "techography-tab-promo-static"}, {"slug": "techography-media", "name": "Techography media", "date": "2026-10-23"}]}</script>
+<script src="script.js"></script>
+</body>
+</html>

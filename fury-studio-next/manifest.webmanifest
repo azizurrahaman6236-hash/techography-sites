@@ -1,0 +1,1 @@
+{"name": "FURY Studio — make FURY talk with your voice", "short_name": "FURY Next", "start_url": "./", "scope": "./", "display": "fullscreen", "display_override": ["fullscreen", "standalone"], "background_color": "#05010f", "theme_color": "#05010f", "icons": [{"src": "tg-icon.png", "sizes": "192x192", "type": "image/png", "purpose": "any"}]}

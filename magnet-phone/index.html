@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#05010f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>MAGNET PHONE 🧲 by Techography</title>
+<meta name="description" content="Bring a real magnet near your phone and watch every icon, letter and button get pulled to it. Plus a Combine lab: ➕ + ➕ = ? by @_techography">
+<meta property="og:title" content="MAGNET PHONE 🧲 by Techography">
+<meta property="og:description" content="Magnet paas lao, sab kuch chipak jayega. Real magnet sensor + Combine lab.">
+<meta property="og:image" content="https://techography-magnet.sites.tab.bot/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <button id="chip" class="chip" type="button" aria-label="Sensor status, tap for help"><span id="chipDot"></span><span id="chipText">Tap Start</span></button>
+    <div class="topbtns">
+      <button id="dbgBtn" class="iconbtn" type="button" aria-label="Show live sensor values">📊</button>
+      <button id="soundBtn" class="iconbtn" type="button" aria-label="Sound on or off">🔇</button>
+      <button id="helpBtn" class="iconbtn" type="button" aria-label="Help">?</button>
+    </div>
+  </header>
+
+  <main id="stage" aria-label="Magnet playground">
+    <div id="edgeGlow" aria-hidden="true"></div>
+    <div id="magnetMark" aria-hidden="true">🧲</div>
+    <div id="hole" aria-hidden="true"><i></i></div>
+
+    <section id="home" class="screen" aria-label="Phone home screen">
+      <div class="row statusrow">
+        <div class="it sb" id="sbTime">20:41</div>
+        <div class="spacer"></div>
+        <div class="it sb">📶 5G</div>
+        <div class="it sb">🔋 87%</div>
+      </div>
+      <div class="it widget clock">
+        <div class="bigtime" id="bigTime">20:41</div>
+        <div class="date" id="bigDate">Monday, 26 October</div>
+      </div>
+      <h1 class="row headline" aria-label="MAGNET PHONE">
+        <span class="it ch">M</span><span class="it ch">A</span><span class="it ch">G</span><span class="it ch">N</span><span class="it ch">E</span><span class="it ch">T</span>
+        <span class="gap"></span>
+        <span class="it ch c2">P</span><span class="it ch c2">H</span><span class="it ch c2">O</span><span class="it ch c2">N</span><span class="it ch c2">E</span>
+      </h1>
+      <div class="row tagrow"><p class="it tag">Magnet paas lao, sab chipak jayega 🧲</p></div>
+      <div class="grid">
+        <div class="it app"><b style="--g:#ff3d6e,#ff9a3d">📷</b><span>Camera</span></div>
+        <div class="it app"><b style="--g:#7b2bff,#ff2bd6">🎵</b><span>Music</span></div>
+        <div class="it app"><b style="--g:#00c96b,#00f0a8">💬</b><span>Chat</span></div>
+        <div class="it app"><b style="--g:#0a84ff,#00f0ff">🗺️</b><span>Maps</span></div>
+        <div class="it app"><b style="--g:#ffcc00,#ff7a00">🖼️</b><span>Photos</span></div>
+        <div class="it app"><b style="--g:#ff2bd6,#ff3d6e">🎬</b><span>Reels</span></div>
+        <div class="it app"><b style="--g:#00f0ff,#7b2bff">🤖</b><span>AI</span></div>
+        <div class="it app"><b style="--g:#2b2b3d,#5a5a7a">⚙️</b><span>Settings</span></div>
+        <div class="it app"><b style="--g:#3dff8b,#00a0ff">🌦️</b><span>Weather</span></div>
+        <div class="it app"><b style="--g:#ff7a00,#ffcc00">🎮</b><span>Games</span></div>
+        <div class="it app"><b style="--g:#a6ff00,#00c96b">💳</b><span>Wallet</span></div>
+        <div class="it app"><b style="--g:#ff9a3d,#ff2bd6">🧮</b><span>Calc</span></div>
+      </div>
+      <div class="row widgets">
+        <div class="it pill bat"><span class="batbar"><i></i></span>87%</div>
+        <a class="it pill follow" href="https://www.instagram.com/_techography/" target="_blank" rel="noopener">Follow @_techography</a>
+      </div>
+      <div class="row dock">
+        <div class="it app d"><b style="--g:#00c96b,#3dff8b">📞</b></div>
+        <div class="it app d"><b style="--g:#0a84ff,#7b2bff">🌐</b></div>
+        <div class="it app d"><b style="--g:#ff3d6e,#ff2bd6">✉️</b></div>
+        <div class="it app d logoapp"><b style="--g:#111,#222"><img src="logo.png" alt="Techography"></b></div>
+      </div>
+    </section>
+
+    <section id="combo" class="screen hidden" aria-label="Combine lab">
+      <div id="comboHud"><span id="discCount">Discovered 6/40</span><span class="hint2">Drag 2 things together ➕</span></div>
+      <div id="arena"></div>
+      <div id="shelfWrap"><div id="shelf" aria-label="Your elements, tap to add"></div></div>
+    </section>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <pre id="debug" class="hidden" aria-live="off"></pre>
+  </main>
+
+  <div id="controls"></div>
+
+  <nav id="tabs" aria-label="Modes">
+    <button class="tab on" data-mode="magnet" type="button"><span>🧲</span>Magnet</button>
+    <button class="tab" data-mode="combine" type="button"><span>⚗️</span>Combine</button>
+    <button class="tab" data-mode="gravity" type="button"><span>🌍</span>Gravity</button>
+  </nav>
+  <div class="credit">made for <b>@_techography</b></div>
+</div>
+
+<div id="start" class="overlay">
+  <div class="startcard">
+    <img src="logo.png" alt="" class="slogo">
+    <h2>MAGNET <em>PHONE</em></h2>
+    <p>Asli magnet phone ke paas lao, aur screen ki har cheez us taraf khinch jayegi.</p>
+    <button id="startBtn" class="bigbtn" type="button">Tap to start 🧲</button>
+    <p class="small">Start dabate hi phone ko 2 second still rakho, magnet door rakho (calibration).</p>
+  </div>
+</div>
+
+<div id="calib" class="overlay hidden">
+  <div class="startcard">
+    <div class="ring"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/><circle id="ringArc" cx="50" cy="50" r="44"/></svg><span>🧲</span></div>
+    <h3 id="calibTitle">Calibrating…</h3>
+    <p id="calibSub">Phone still rakho, magnet abhi door rakho</p>
+  </div>
+</div>
+
+<div id="sheet" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheetcard">
+    <button id="sheetClose" class="iconbtn close" type="button" aria-label="Close">✕</button>
+    <h3 id="sheetTitle">How the magnet works 🧲</h3>
+    <p id="sensorLine" class="sensorline">Sensor: checking…</p>
+    <ol>
+      <li>Tap Start, keep the phone still for 2 s with the magnet away.</li>
+      <li>Bring a magnet close to the <b>top half / back</b> of the phone (that's where the compass chip usually is). Strong fridge or speaker magnets work best.</li>
+      <li>Things fly the wrong way? Tap <b>⇄ Flip</b>. Want them to always go to one side? Pick a side below.</li>
+      <li>Moved the phone a lot? Tap <b>Recalibrate</b>.</li>
+      <li>Not moving? Tap <b>📊</b> (top) to see live sensor values: which path is active, heading, and how much the magnet bends it.</li>
+    </ol>
+    <div class="opts">
+      <div class="optlabel">Magnet side</div>
+      <div class="seg" id="sideSeg">
+        <button data-side="auto" class="on" type="button">Auto</button>
+        <button data-side="top" type="button">⬆️</button>
+        <button data-side="left" type="button">⬅️</button>
+        <button data-side="right" type="button">➡️</button>
+        <button data-side="bottom" type="button">⬇️</button>
+        <button data-side="center" type="button">⊙</button>
+      </div>
+      <div class="btnrow">
+        <button id="flipBtn" class="pillbtn" type="button">⇄ Flip</button>
+        <button id="recalBtn" class="pillbtn" type="button">↺ Recalibrate</button>
+        <button id="meterBtn" class="pillbtn" type="button">📊 Live values</button>
+      </div>
+    </div>
+    <details>
+      <summary>Phone not reacting? (Android Chrome extra-accurate mode)</summary>
+      <p>Most Android phones work out of the box (we read the compass). For the most accurate, direction-aware magnet on Android Chrome:</p>
+      <ol>
+        <li>Open a new tab and type <code>chrome://flags</code></li>
+        <li>Search <b>Generic Sensor Extra Classes</b> → set <b>Enabled</b></li>
+        <li>Tap <b>Relaunch</b>, then open this page again</li>
+      </ol>
+      <p>iPhone: Safari asks for "Motion &amp; Orientation" when you tap Start, allow it. If you said no, close the tab and open the page again.</p>
+      <p>No compass at all (laptops, some tablets)? Hold or drag on the screen to act as the magnet.</p>
+    </details>
+    <p class="small">Made for <b>@_techography</b> · Works offline once loaded</p>
+  </div>
+</div>
+
+<script src="matter.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

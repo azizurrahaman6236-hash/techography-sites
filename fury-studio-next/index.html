@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FURY Studio â make FURY talk with your voice</title>
+<meta name="description" content="Upload your voiceover and FURY, the liquid-glass AI presenter, reacts to every word. Download the video in vertical or horizontal.">
+<meta name="theme-color" content="#05070d">
+<link rel="stylesheet" href="styles.css?v=8">
+
+<!-- techography fullscreen / app mode -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+<header class="top">
+  <div class="brand"><span class="dot" aria-hidden="true"></span>FURY <b>Studio</b></div>
+  <p class="tag">Your voice. FURY's body.</p>
+</header>
+
+<main class="wrap">
+  <section class="stage-col" aria-label="Preview">
+    <div id="stageBox" class="stage vertical">
+      <canvas id="stage" width="1080" height="1920" aria-label="FURY live preview"></canvas>
+      <div id="loading" class="overlay"><div class="load-in"><span class="spin" aria-hidden="true"></span>Loading FURYâ¦<a class="late" href="./?r=1">Still loading? Tap to retry</a></div></div>
+      <div id="recBadge" class="rec" hidden><span></span>REC</div>
+    </div>
+    <div class="transport">
+      <button id="playBtn" class="btn ghost" disabled>â¶ Play preview</button>
+      <div class="time"><span id="tCur">0:00</span> / <span id="tDur">0:00</span></div>
+    </div>
+    <div class="meter" aria-hidden="true"><i id="meterFill"></i></div>
+  </section>
+
+  <section class="steps-col">
+    <div class="card">
+      <h2><span class="num">1</span>Choose format</h2>
+      <div class="seg" role="radiogroup" aria-label="Video format">
+        <button class="seg-btn active" data-fmt="vertical" role="radio" aria-checked="true"><span class="ico v"></span>Vertical<small>9:16 Â· Reels / Shorts</small></button>
+        <button class="seg-btn" data-fmt="horizontal" role="radio" aria-checked="false"><span class="ico h"></span>Horizontal<small>16:9 Â· YouTube</small></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">2</span>Add your voice</h2>
+      <label class="drop" id="drop">
+        <input id="file" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.aac">
+        <span class="drop-ico">â¬</span>
+        <span id="dropText">Tap to upload voiceover<br><small>MP3, WAV, M4A, OGG</small></span>
+      </label>
+      <div class="or">or</div>
+      <button id="micBtn" class="btn ghost wide">ð Record with mic</button>
+      <p id="voiceInfo" class="info" hidden></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">3</span>Preview</h2>
+      <p class="hint">Press play. FURY comes alive and morphs with every word, and fades back to almost invisible in the pauses.</p>
+      <button id="playBtn2" class="btn ghost wide" disabled>â¶ Play preview</button>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">4</span>Download</h2>
+      <p class="hint">FURY renders your full voiceover, start to end, frame by frame. Keep this screen open until it's done.</p>
+      <button id="exportBtn" class="btn primary wide" disabled>â¡ Create video</button>
+      <div class="progress" id="progWrap" hidden><i id="prog"></i><span id="progText">0%</span></div>
+      <a id="dlLink" class="btn primary wide" hidden download>â¬ Download video</a>
+      <p id="exportInfo" class="info" hidden></p>
+    </div>
+  </section>
+</main>
+<footer class="foot">FURY Studio Â· everything runs in your browser, your voice never leaves your phone.</footer>
+<script src="assets/mp4-muxer.js?v=8"></script>
+<script src="script.js?v=8"></script>
+<!-- techography fullscreen button -->
+<style>#tgfs{position:fixed;right:10px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:2147483647;width:40px;height:40px;border-radius:12px;border:1px solid rgba(0,240,255,.55);background:rgba(8,8,20,.6);color:#fff;font:20px/1 system-ui,sans-serif;display:flex;align-items:center;justify-content:center;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);-webkit-tap-highlight-color:transparent;opacity:.85;cursor:pointer;padding:0;margin:0;box-shadow:0 0 12px rgba(0,240,255,.35);touch-action:manipulation}#tgfs:active{transform:scale(.9)}</style>
+<button id="tgfs" type="button" aria-label="Full screen" title="Full screen">&#x26F6;</button>
+<script>(function(){var b=document.getElementById('tgfs'),d=document,e=d.documentElement;var inFrame=false;try{inFrame=window.top!==window}catch(x){inFrame=true}
+var req=e.requestFullscreen||e.webkitRequestFullscreen;if(inFrame||!req||!(d.fullscreenEnabled||d.webkitFullscreenEnabled)){b.parentNode.removeChild(b);return}
+function cur(){return d.fullscreenElement||d.webkitFullscreenElement}
+function upd(){var f=!!cur();b.innerHTML=f?'&#x2715;':'&#x26F6;';b.setAttribute('aria-label',f?'Exit full screen':'Full screen');b.title=b.getAttribute('aria-label')}
+['pointerdown','touchstart','mousedown'].forEach(function(t){b.addEventListener(t,function(ev){ev.stopPropagation()},{passive:true})});
+b.addEventListener('click',function(ev){ev.stopPropagation();ev.preventDefault();if(cur()){(d.exitFullscreen||d.webkitExitFullscreen).call(d)}else{try{var p=req.call(e,{navigationUI:'hide'});if(p&&p.catch)p.catch(function(){})}catch(x){}}});
+d.addEventListener('fullscreenchange',upd);d.addEventListener('webkitfullscreenchange',upd)})();</script>
+</body>
+</html>
